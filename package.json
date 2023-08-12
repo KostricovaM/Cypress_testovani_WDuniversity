@@ -1,0 +1,12 @@
+{
+  "name": "Cypress_testovani_WDuniversity",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/KostricovaM/Cypress_testovani_WDuniversity.git",
+  "author": "Markéta Kostřicová <kostricova.market@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^12.17.3",
+    "typescript": "^5.1.6"
+  }
+}
