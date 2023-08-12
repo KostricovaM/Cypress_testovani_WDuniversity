@@ -5,6 +5,9 @@
   "repository": "https://github.com/KostricovaM/Cypress_testovani_WDuniversity.git",
   "author": "Markéta Kostřicová <kostricova.market@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "open:cypress": "cypress open"
+  },
   "devDependencies": {
     "cypress": "^12.17.3",
     "typescript": "^5.1.6"
