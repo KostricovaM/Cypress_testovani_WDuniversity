@@ -20,11 +20,28 @@ describe('login page', () => {
       .should('have.text', 'Login')
   })
 
-  // it('empty fields - login warning', () => {
-  //   cy.
-  // })
+  it('empty fields - login warning', () => {
+    cy
+      .get('#login-button')
+      .click()
 
-  // it('succesful login', () => {
-  //   cy.
-  // })
+    cy.on('window:alert', (popUp) => {
+      expect(popUp).to.equal('validation failed')
+      return true;
+    })
+  })
+
+  it('succesful login', () => {
+    cy
+      .get('#text')
+      .type('Moje Jmeno')
+
+    cy
+      .get('#password')
+      .type('MojeHeslo')
+
+    cy
+      .get('#login-button')
+      .click()
+  })
 })
