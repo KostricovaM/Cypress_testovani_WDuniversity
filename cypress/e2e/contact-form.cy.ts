@@ -51,23 +51,26 @@ describe('fill in all info and use reset button', () => {
 
     })
 
-    it('fill the form + reset', () => {
+    it('fill the form, assert + reset', () => {
 
         cy
             .get(firstName)
             .type('Anna')
+            .should('have.value', 'Anna')
 
         cy
             .get(lastName)
             .type('Moudrá')
+            .should('have.value', 'Moudrá')
 
         cy
             .get(emailAddress)
             .type('hana.moudra5184@seznam.cz')
-
+            .should('have.value', 'hana.moudra5184@seznam.cz')
         cy
             .get(comments)
             .type('Zde je můj komentář.')
+            .should('have.value', 'Zde je můj komentář.')
 
         cy
             .get(resetButton)
@@ -76,19 +79,19 @@ describe('fill in all info and use reset button', () => {
         //assertion / reset button works
         cy
             .get(firstName)
-            .should('have.attr', 'placeholder', 'First Name')
+            .should('have.value', '')
 
         cy
             .get(lastName)
-            .should('have.attr', 'placeholder', 'Last Name')
+            .should('have.value', '')
 
         cy
             .get(emailAddress)
-            .should('have.attr', 'placeholder', 'Email Address')
+            .should('have.value', '')
 
         cy
             .get(comments)
-            .should('have.attr', 'placeholder', 'Comments')
+            .should('have.value', '')
 
     })
 
